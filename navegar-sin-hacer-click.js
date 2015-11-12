@@ -1,6 +1,8 @@
 /**
- * Permite navegar a la dirección HREF de un link simplemente dejando el ratón
- * encima del enlace durante 2 segundos.
+ * ----------------------------------------------------------------------------
+ * Permite navegar a la dirección del HREF de un link simplemente dejando el
+ * ratón encima del enlace durante 2 segundos.
+ * ----------------------------------------------------------------------------
  */
 
 (function(h){
@@ -31,4 +33,8 @@
 
 
 // Navegar sin hacer click:
+// ----------------------------------------------------------------------------
+
 (function(h){var all=document.getElementsByTagName("a");for(var i=0,j=all.length;i<j;i++){all[i].onmouseover=function(){var a=this;h=window.setTimeout(function(){window.location=a.href},2000);};all[i].onmouseout=function(){window.clearTimeout(h);};}})();
+
+// ----------------------------------------------------------------------------
