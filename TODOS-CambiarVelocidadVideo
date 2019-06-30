@@ -1,0 +1,22 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// TAREA: Cambia la velocidad del primer vídeo que haya en la página Web
+// SITIO: Todos
+// AUTOR: @malnuer
+// ---------------------------------------------------------------------------------------------------------------------
+
+document.addEventListener('keyup',function(e){
+  if(e.altKey && e.keyCode>=48 && e.keyCode<=57){
+    document.querySelector('video').playbackRate = 1 + ((e.keyCode-48)/10);
+	  alert("Velocidad: " + document.querySelector('video').playbackRate + "x");
+  }
+});
+
+/* ================================================================================================================== *\
+El cambio de velocidad sólo se aplicará al primer vídeo que haya en la página Web.
+Para cambiar la velocidad, se debe pulsar ALT + Número. Donde el número es una de las teclas del 0 a 9.
+- Si se pulsa el cero, se pondrá la velocidad a 1.0x (valor normal)
+- Si se pulsa el uno, se pondrá la velocidad a 1.1x
+- Si se pulsa el dos, se pondrá la velocidad a 1.2x
+...
+- Si se pulsa el nueve, se pondrá la velocidad a 1.9x (valor máximo)
+\* ================================================================================================================== */
