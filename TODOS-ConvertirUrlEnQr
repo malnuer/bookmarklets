@@ -1,0 +1,13 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// TAREA: Convierte la página web cargada en un Código QR
+// SITIO: Todos
+// AUTOR: @malnuer
+// ---------------------------------------------------------------------------------------------------------------------
+
+window.location='http://chart.apis.google.com/chart?cht=qr&chs=300x300&chl='+window.location;
+
+
+/* ================================================================================================================== *\
+Este código convierte la URL de la web que esté cargada en un código QR que lleve a dicha URL.
+Funciona gracias a la librería Chart de Google.
+\* ================================================================================================================== */
