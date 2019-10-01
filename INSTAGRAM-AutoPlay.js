@@ -7,34 +7,34 @@
 
 (function(tiempo){
 
-	// Vemos si está definido el timer
+    // Vemos si está definido el timer
     if(window.timerAutoPlay){
-    	// Si SÍ está definido, lo eliminamos
+        // Si SÍ está definido, lo eliminamos
         window.clearInterval(window.timerAutoPlay);
         window.timerAutoPlay = false;
     }else{
-    	// Si NO está definido, lo establecemos
+        // Si NO está definido, lo establecemos
         window.timerAutoPlay = window.setInterval(AutoPlay,tiempo);
     }
 
     // Pulsa el botón de siguiente imagen (si está) y si no, pulsa el de siguiente publicación (si está), y si no, nada
-	function AutoPlay(){
+    function AutoPlay(){
 
-		// Botón para pasar a la siguiente imagen dentro de una publicación
-		var sigImagen = document.querySelector("DIV.coreSpriteRightChevron");
-		if(sigImagen){
-			// Hacemos click en el botón de siguiente imagen
-			sigImagen.click();
-		} else {
-			// Botón para pasar a la siguiente publicación
-			var sigPublicacion = document.querySelector("A.coreSpriteRightPaginationArrow");
-			if(sigPublicacion) {
-				// Hacemos click en el botón de siguiente publicación
-				sigPublicacion.click();
-			}
-		}
+    // Botón para pasar a la siguiente imagen dentro de una publicación
+        var sigImagen = document.querySelector("DIV.coreSpriteRightChevron");
+        if(sigImagen){
+            // Hacemos click en el botón de siguiente imagen
+            sigImagen.click();
+        } else {
+            // Botón para pasar a la siguiente publicación
+            var sigPublicacion = document.querySelector("A.coreSpriteRightPaginationArrow");
+            if(sigPublicacion) {
+                // Hacemos click en el botón de siguiente publicación
+                sigPublicacion.click();
+                }
+        }
 
-	}
+    }
 
 })(3000);
 
