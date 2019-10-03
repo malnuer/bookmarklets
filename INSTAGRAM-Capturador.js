@@ -46,8 +46,8 @@
 
     // Elimina la página de Instagram y muestra los resultados capturados
     function Resultados(){
-        document.head.innerHTML=""
-        document.body.style.overflow ="visible"
+        document.head.innerHTML = "";
+        document.body.style.overflow = "visible";
         document.body.innerHTML = Object.values(window.archivos).join("");
     }
 
